@@ -1,4 +1,4 @@
-#include <lib_ultrasonido.h>
+#include "lib_ultrasonido.h"
 #define trig 39
 #define echo 38
 
@@ -10,5 +10,6 @@ void setup() {
 
 void loop() {
   Serial.println(sensor.get_cm());
+  delay(60);
 }
 

@@ -5,6 +5,8 @@
     Autor: Nicolás Villegas E.
 */
 
+#include "Arduino.h"
+
 class HCSR04 {
 
     public:
@@ -12,11 +14,11 @@ class HCSR04 {
         float get_cm(void);
 
     private:
-        uint64_t count_us(void);
+        long count_us(void);
         void trigger(void);
-        uint64_t tiempo;
+        long tiempo;
         float distancia;
         int pin_trig;
         int pin_echo;
 
-}
+};
