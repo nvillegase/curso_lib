@@ -35,7 +35,7 @@ long HCSR04::count_us(void) {
     */
     while(digitalRead(pin_echo)) {
         if (micros() - start_us > 20e3) {
-        return -1;
+            return -1;
         }
     }
 
